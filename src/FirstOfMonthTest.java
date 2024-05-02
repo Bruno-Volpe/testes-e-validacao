@@ -1,3 +1,5 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +17,16 @@ public class FirstOfMonthTest {
     public void testMonthInNonLeapYear() {
         int expectedDayOfWeek = 3;
         Assert.assertEquals(expectedDayOfWeek, cal.firstOfMonth(3, 2023));
+    }
+
+    @Test
+    public void testFirstOfMonth() {
+        Cal cal = new Cal();
+        int m = 10; // mês maior que 9
+        int a = 1752; // ano igual a 1752
+        int expected = 0; // valor esperado, ajuste conforme necessário
+        int result = cal.firstOfMonth(m, a);
+        assertEquals(expected, result);
     }
 
     @Test
