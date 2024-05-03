@@ -41,4 +41,9 @@ public class NumberOfDaysTest {
     public void testSpecialCaseOfSeptember1752() {
         assertEquals(19, cal.numberOfDays(9, 1752));
     }
+
+    @Test
+    public void testNonSeptemberMonthIn1752() {
+        assertEquals(31, cal.numberOfDays(8, 1752)); // Agosto de 1752 deve ter 31 dias
+    }
 }
